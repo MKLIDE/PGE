@@ -1,0 +1,3 @@
+- Create a .pbix in Power BI Desktop using sample data pulled from your backend (export CSV or connect to Azure).
+- Publish to Power BI Service and get embed URL for frontend usage.
+- For production embedding, set up an Azure AD app and use service principal authentication.
