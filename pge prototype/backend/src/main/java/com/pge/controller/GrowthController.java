@@ -67,7 +67,7 @@ public class GrowthController {
         ResponseEntity<Map> response = restTemplate.postForEntity(ollamaUrl, request, Map.class);
         String aiResponse = (String) response.getBody().get("response");
         
-        System.out.println("📝 AI Response: " + aiResponse); // Debug log
+        System.out.println("AI Response: " + aiResponse); // Debug log
         
         return parseAIResponse(aiResponse);
     }
@@ -122,6 +122,31 @@ public class GrowthController {
             "• Join communities focused on " + userGoal + " for guidance",
             "• Track your progress in " + userGoal + " with measurable outcomes"
         };
+    }
+    //update goal endpoint
+    @PutMapping("/goals/{id}")
+    public ResponseEntity<GrowthGoal> updateGoal(
+            @PathVariable String id, 
+            @RequestBody GrowthGoal updatedGoal) {
+        
+        return repo.findById(id)
+            .map(existingGoal -> {
+                existingGoal.setTitle(updatedGoal.getTitle());
+                existingGoal.setCategory(updatedGoal.getCategory());
+                existingGoal.setProgress(updatedGoal.getProgress());
+                repo.save(existingGoal);
+                return ResponseEntity.ok(existingGoal);
+            })
+            .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+    // Delete a goal by ID
+    @DeleteMapping("/goals/{id}")
+    public ResponseEntity<Void> deleteGoal(@PathVariable String id) {
+        if (!repo.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+        repo.deleteById(id);
+        return ResponseEntity.noContent().build();
     }
 
     // Keep your existing endpoints
