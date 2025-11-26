@@ -1,1 +1,119 @@
+/* Container spacing */
+.dashboard-container {
+  padding: 20px;
+  font-family: "Inter", Arial, sans-serif;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Section Titles */
+.dashboard-container h2 {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Goal list styling */
+.goal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Goal card */
+.goal-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.goal-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+/* Goal title */
+.goal-title {
+  font-size: 20px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Goal meta text */
+.goal-meta {
+  color: #555;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* Buttons (Edit/Delete/Save/Cancel) */
+.goal-item button {
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.goal-item button:hover {
+  transform: scale(1.05);
+}
+
+/* Edit button */
+.btn-edit {
+  background: #2196f3;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #0d8bf2;
+}
+
+/* Delete button */
+.btn-delete {
+  background: #e53935;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #d32f2f;
+}
+
+/* Save button */
+.btn-save {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-save:hover {
+  background: #43a047;
+}
+
+/* Cancel button */
+.btn-cancel {
+  background: #9e9e9e;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #818181;
+}
+
+/* Edit form inputs */
+.goal-edit-input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 8px;
+  font-size: 14px;
+  width: 150px;
+}
 
