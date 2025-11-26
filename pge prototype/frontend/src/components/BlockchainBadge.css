@@ -1,0 +1,41 @@
+.blockchain-badge-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.blockchain-btn {
+  padding: 6px 12px;
+  background-color: #4caf50; /* nice green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.blockchain-btn:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.blockchain-verified {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.blockchain-verifying {
+  color: #ff9800; /* orange for processing */
+  font-weight: bold;
+}
+
+.blockchain-failed {
+  color: #f44336; /* red for error */
+  font-weight: bold;
+}
+
+.blockchain-badge-container span {
+  font-size: 0.9rem;
+}
